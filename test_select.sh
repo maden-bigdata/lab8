@@ -6,6 +6,7 @@ clickhouse-client --query="select * from lab8.userlog
         or day=4 and speed > 7759980.1843792
         or day=5 and speed > 8013852.6257377
         or day=6 and speed > 8060999.8813053
-        or day=7 and speed > 7476906.5154676" > select_values.txt
+        or day=7 and speed > 7476906.5154676
+        order by day" > select_values.txt
 duration=$(($( date +%s%3N ) - start ))
 echo "Select took ${duration} ms"
